@@ -1,0 +1,54 @@
+body {
+    background: radial-gradient(#1b2f13, #091813);
+}
+
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.image-content {
+    background: url('pexels-the-cactusena-18031294.jpg');
+    /* background: url('https://images.pexels.com/photos/18031294/pexels-photo-18031294/free-photo-of-mulher-camera-maquina-folhas.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
+    height: 650px;
+    width: 650px;
+    box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+@media only screen and (max-width: 767px) { 
+    .image-content {
+        background: url('pexels-the-cactusena-18031294-mobile.jpg');
+        /* background: url('https://images.pexels.com/photos/18031294/pexels-photo-18031294/free-photo-of-mulher-camera-maquina-folhas.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        /* background-attachment: fixed; */
+        height: 300px;
+        width: 300px;
+        box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
+        animation: animate 5s ease-in-out infinite;
+        transition: all 1s ease-in-out;
+    }
+} 
